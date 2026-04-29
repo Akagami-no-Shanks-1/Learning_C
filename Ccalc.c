@@ -23,15 +23,15 @@ int main()
         {
             printf("sum of %d and %d = %d\n", a, b, a + b);
         }
-        if (op == '-')
+        else if (op == '-')
         {
             printf("difference of %d and %d = %d\n", a, b, a - b);
         }
-        if (op == '*')
+        else if (op == '*')
         {
             printf("product of %d and %d = %d\n", a, b, a * b);
         }
-        if (op == '/')
+        else if (op == '/')
         {
             if (b == 0)
             {
@@ -39,10 +39,10 @@ int main()
             }
             else
             {
-                printf("quotient of %d and %d = %d\n", a, b, a / b);
+                printf("quotient of %d and %d = %f\n", a, b, (float)a / b);
             }
         }
-        if (op != '+' && op != '-' && op != '*' && op != '/' && op != 'q')
+        else
         {
             printf("Invalid operator\n");
         }
