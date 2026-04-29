@@ -42,7 +42,7 @@ int main()
                 printf("quotient of %d and %d = %d\n", a, b, a / b);
             }
         }
-        else
+        if (op != '+' && op != '-' && op != '*' && op != '/' && op != 'q')
         {
             printf("Invalid operator\n");
         }
