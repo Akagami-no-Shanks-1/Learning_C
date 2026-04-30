@@ -2,50 +2,50 @@
 
 int main()
 {
-    int a, b;
-    char op;
-
     while (1)
     {
-        printf("Enter an opertion (=,-,*,/ or q to quit):");
+        int a, b;
+        char op;
+
+        printf("Enter an opertion (+,-,*,/ or q to quit):");
         scanf(" %c", &op); // Note the space before %c to consume any leftover whitespace
 
         if (op == 'q')
         {
             break;
         }
+        if (op != '+' && op != '-' && op != '*' && op != '/')
+        {
+            printf("Invalid operator. Please try again.\n");
+            continue;
+        }
         printf("Enter number 1:");
         scanf("%d", &a);
         printf("Enter number 2:");
         scanf("%d", &b);
 
-        if (op == '+')
+        switch (op)
         {
-            printf("sum of %d and %d = %d\n", a, b, a + b);
-        }
-        else if (op == '-')
-        {
+        case '+': // Addition
+            printf("Sum of %d and %d = %d\n", a, b, a + b);
+            break;
+        case '-': // subtraction
             printf("difference of %d and %d = %d\n", a, b, a - b);
-        }
-        else if (op == '*')
-        {
+            break;
+        case '*': // multiplication
             printf("product of %d and %d = %d\n", a, b, a * b);
-        }
-        else if (op == '/')
-        {
-            if (b == 0)
-            {
-                printf("Cannot divide by zero\n");
-            }
-            else
+            break;
+        case '/': // division
+            if (b != 0)
             {
                 printf("quotient of %d and %d = %f\n", a, b, (float)a / b);
             }
-        }
-        else
-        {
-            printf("Invalid operator\n");
+            else
+            {
+                printf("Error: Cannot divide by zero.\n");
+            }
+            break;
         }
     }
     return 0;
-}
+} // This is Version 2.0 of calculator with switch function used.
