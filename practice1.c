@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 // This is practice problem 1 modified
 int main()
 {
