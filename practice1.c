@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
-// This is practice problem 1 modified
+/*This is practice problem 1 modified. Now a ready project 1.
+It is a simple program to calculate the area of 2D shapes and volume/surface area of 3D shapes.
+It has Switch cases for different shapes*/
 int main()
 {
     while (1)
