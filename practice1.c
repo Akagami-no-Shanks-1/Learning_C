@@ -84,8 +84,8 @@ int main()
             case 5:
                 printf("Enter the side of the cube: "); // This takes input for the side of cube
                 scanf("%d", &length);
-                printf("Volume of Cube = %d\n", pow(length, 3));           // This calculates volume of cube side^3
-                printf("Surface Area of Cube = %d\n", 6 * pow(length, 2)); // This calculates surface area of cube 6*side^2
+                printf("Volume of Cube = %d\n", length * length * length);  // This calculates volume of cube side^3
+                printf("Surface Area of Cube = %d\n", 6 * length * length); // This calculates surface area of cube 6*side^2
                 break;
             default:
                 printf("Invalid 3D shape selection. Please try again.\n"); // This handles invalid input for 3D shape selection
