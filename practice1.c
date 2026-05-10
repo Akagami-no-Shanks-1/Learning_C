@@ -20,23 +20,23 @@ int main()
         switch (shape)
         {
         case 1:
-            printf("Enter the radius of the circle:"); // This takes input from user for radius of circle
+            printf("Enter the radius of the circle: "); // This takes input from user for radius of circle
             scanf("%d", &radius);
-            printf("Area of Circle = %.2f", 3.14 * pow(radius, 2)); // This calculates area of circle pi*r^2
+            printf("Area of Circle = %.2f\n", 3.14 * pow(radius, 2)); // This calculates area of circle pi*r^2
             break;
 
         case 2:
-            printf("Enter length of the rectangle:"); // This takes input for the length of rectangle
+            printf("Enter length of the rectangle: "); // This takes input for the length of rectangle
             scanf("%d", &length);
-            printf("Enter width of the rectangle:"); // This takes input for the width of rectangle
+            printf("Enter width of the rectangle: "); // This takes input for the width of rectangle
             scanf("%d", &width);
-            printf("Area of Rectangle = %d", length * width); // This calculates area of rectangle length*width
+            printf("Area of Rectangle = %d\n", length * width); // This calculates area of rectangle length*width
             break;
 
         case 3:
-            printf("Enter the side of the Square:"); // This takes input for the side of square
+            printf("Enter the side of the Square: "); // This takes input for the side of square
             scanf("%d", &length);
-            printf("Area of Square = %d", length * length); // This calculates area of square side^2
+            printf("Area of Square = %d\n", length * length); // This calculates area of square side^2
             break;
 
         case 4:
@@ -48,39 +48,39 @@ int main()
             switch (subshape)
             {
             case 1:
-                printf("Enter the radius of the sphere:"); // This takes input for the radius of sphere
+                printf("Enter the radius of the sphere: "); // This takes input for the radius of sphere
                 scanf("%d", &radius);
                 printf("Volume of Sphere = %.2f\n", (4.0 / 3.0) * 3.14 * pow(radius, 3)); // This calculates volume of sphere (4/3)*pi*r^3
                 printf("Surface Area of Sphere = %.2f\n", 4.0 * 3.14 * pow(radius, 2));   // This calculates surface area of sphere 4*pi*r^2
                 break;
             case 2:
-                printf("Enter the radius of the cylinder:"); // This takes input for the radius of cylinder
+                printf("Enter the radius of the cylinder: "); // This takes input for the radius of cylinder
                 scanf("%d", &radius);
-                printf("Enter the height of the cylinder:"); // This takes input for the height of cylinder
+                printf("Enter the height of the cylinder: "); // This takes input for the height of cylinder
                 scanf("%d", &height);
                 printf("Volume of Cylinder = %.2f\n", 3.14 * pow(radius, 2) * height);                // This calculates volume of cylinder pi*r^2*h
                 printf("Surface Area of Cylinder = %.2f\n", 2.0 * 3.14 * radius * (radius + height)); // This calculates surface area of cylinder 2*pi*r*(r+h)
                 break;
             case 3:
-                printf("Enter the radius of the cone:"); // This takes input for the radius of cone
+                printf("Enter the radius of the cone: "); // This takes input for the radius of cone
                 scanf("%d", &radius);
-                printf("Enter the height of the cone:"); // This takes input for the height of cone
+                printf("Enter the height of the cone: "); // This takes input for the height of cone
                 scanf("%d", &height);
                 printf("Volume of Cone = %.2f\n", (1.0 / 3.0) * 3.14 * pow(radius, 2) * height);                           // This calculates volume of cone (1/3)*pi*r^2*h
                 printf("Surface Area of Cone = %.2f\n", 3.14 * radius * (radius + sqrt(pow(height, 2) + pow(radius, 2)))); // This calculates surface area of cone pi*r*(r+l) where l is slant height
                 break;
             case 4:
-                printf("Enter the length of the cuboid:"); // This takes input for the length of cuboid
+                printf("Enter the length of the cuboid: "); // This takes input for the length of cuboid
                 scanf("%d", &length);
-                printf("Enter the width of the cuboid:"); // This takes input for the width of cuboid
+                printf("Enter the width of the cuboid: "); // This takes input for the width of cuboid
                 scanf("%d", &width);
-                printf("Enter the height of the cuboid:"); // This takes input for the height of cuboid
+                printf("Enter the height of the cuboid: "); // This takes input for the height of cuboid
                 scanf("%d", &height);
                 printf("Volume of Cuboid = %d\n", length * width * height);                                       // This calculates volume of cuboid length*width*height
                 printf("Surface Area of Cuboid = %d\n", 2 * (length * width + width * height + length * height)); // This calculates surface area of cuboid 2*(lw + wh + lh)
                 break;
             case 5:
-                printf("Enter the side of the cube:"); // This takes input for the side of cube
+                printf("Enter the side of the cube: "); // This takes input for the side of cube
                 scanf("%d", &length);
                 printf("Volume of Cube = %d\n", pow(length, 3));           // This calculates volume of cube side^3
                 printf("Surface Area of Cube = %d\n", 6 * pow(length, 2)); // This calculates surface area of cube 6*side^2
