@@ -12,7 +12,7 @@ int main()
         int lower_case = ch; // This converts the character to its ASCII value and stores it in 'lower_case'
 
         printf("The ASCII value of %c is %d \n", ch, lower_case); // This prints the character and its ASCII value
-        if (lower_case >= 97 && lower_case <= 122)
+        if (lower_case >= 97 && lower_case <= 122)                // check ASCII value for lower case letters (a-z)
         {
             printf("The character is lower case. \n"); // This checks if the ASCII value corresponds to a lower case letter (a-z)
             break;
