@@ -21,7 +21,9 @@ int main()
         int choice;
         int isPrime = 1;
 
-        printf(" quit: 0\n Sum of n numbers: 1\n Table generator: 2\n Sum of numbers in a table: 3\n Factorial of a number: 4\n Check if number is prime: 5\n Get factors of a number: 6\n");
+        printf(" quit: 0\n Sum of n numbers: 1\n Table generator: 2\n Sum of numbers in a table: 3\n ");
+        printf("Factorial of a number: 4\n Check if number is prime: 5\n Get factors of a number: 6\n ");
+        printf("nth term of Fibonacci series starting from 0th: 7\n ");
         printf(" choose the funtion you want to operate: ");
         scanf("%d", &choice);
 
@@ -118,7 +120,7 @@ int main()
             {
                 printf("%d had no factors\n", number);
             }
-            else if (number != 0)
+            else
             {
                 printf("Factors of %d are :\n", number);
                 for (int i = 1; i <= number; i++)
@@ -128,6 +130,28 @@ int main()
                         printf(" %d\n", i);
                     }
                 }
+            }
+            break;
+        }
+
+        case 7:
+        {
+            int a = 0, b = 1, c;
+            printf("Enter n to get nth Fibonacci number: ");
+            scanf("%d", &number);
+            if (number <= 1)
+            {
+                printf("%dth Fibonacci number = %d\n", number, number);
+            }
+            else
+            {
+                for (int i = 2; i <= number; i++)
+                {
+                    c = b + a;
+                    a = b;
+                    b = c;
+                }
+                printf("%dth Fibonacci number = %d\n", number, c);
             }
             break;
         }
