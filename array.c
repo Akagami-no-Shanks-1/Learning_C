@@ -7,6 +7,7 @@ int main()
         int func, column, row, number;
 
         printf(" Quit: 0\n Enter values and print a 2D matrix: 1\n Get multiplication Table: 2\n ");
+        printf("Reverse an Array: 3\n ");
         printf("Choose funtion to perform: ");
         scanf("%d", &func);
 
@@ -63,6 +64,28 @@ int main()
             }
 
             break;
+        }
+
+        case 3:
+        {
+            printf("Enter length of the array: ");
+            scanf("%d", &number);
+
+            int arr[number], rev[number];
+            for (int i = 0; i < number; i++)
+            {
+                printf("Enter value %d for array: ", i + 1);
+                scanf("%d", &arr[i]);
+            }
+            for (int i = 0; i < number; i++)
+            {
+                rev[i] = arr[number - i - 1];
+            }
+            printf("Here is reversed array:\n");
+            for (int i = 0; i < number; i++)
+            {
+                printf("%d ", rev[i]);
+            }
         }
         }
     }
