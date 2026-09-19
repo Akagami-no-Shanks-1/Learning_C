@@ -7,7 +7,7 @@ int main()
         int func, column, row, number;
 
         printf(" Quit: 0\n Enter values and print a 2D matrix: 1\n Get multiplication Table: 2\n ");
-        printf("Reverse an Array: 3\n ");
+        printf("Reverse an Array: 3\n Get 3 multiplication tables: 4\n ");
         printf("Choose funtion to perform: ");
         scanf("%d", &func);
 
@@ -43,7 +43,7 @@ int main()
                 {
                     printf("%-3d ", matrix[i][j]);
                 }
-                printf("  |");
+                printf("|");
                 printf("\n");
             }
 
@@ -55,12 +55,12 @@ int main()
 
             printf("Enter the table to print: ");
             scanf("%d", &number);
-            int multi[10];
+            int arr[10];
 
             for (int i = 1; i <= 10; i++)
             {
-                multi[i - 1] = number * i;
-                printf("%d * %2d = %2d\n", number, i, multi[i - 1]);
+                arr[i - 1] = number * i;
+                printf("%d * %2d = %2d\n", number, i, arr[i - 1]);
             }
 
             break;
@@ -71,20 +71,53 @@ int main()
             printf("Enter length of the array: ");
             scanf("%d", &number);
 
-            int arr[number], rev[number];
+            int arr[number];
+            int temp;
+
             for (int i = 0; i < number; i++)
             {
                 printf("Enter value %d for array: ", i + 1);
                 scanf("%d", &arr[i]);
             }
-            for (int i = 0; i < number; i++)
+
+            for (int i = 0; i < number / 2; i++)
             {
-                rev[i] = arr[number - i - 1];
+                temp = arr[i];
+                arr[i] = arr[(number - 1) - i];
+                arr[(number - 1) - i] = temp;
             }
-            printf("Here is reversed array:\n");
+
+            printf("Here is reversed array : \n");
+
             for (int i = 0; i < number; i++)
             {
-                printf("%d ", rev[i]);
+                printf("%d ", arr[i]);
+            }
+            break;
+        }
+
+        case 4:
+        {
+            int arr[3][10];
+            int num[3];
+            int *ptr_num = num;
+
+            for (int i = 0; i < 3; i++)
+            {
+                printf("Enter a number to get it's table no. %d: ", i + 1);
+                scanf("%d", &num[i]);
+                for (int j = 1; j <= 10; j++)
+                {
+                    arr[i][j - 1] = *(ptr_num + i) * j;
+                }
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    printf("%2d ", arr[i][j]);
+                }
+                printf("\n");
             }
         }
         }
